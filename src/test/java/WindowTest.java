@@ -52,7 +52,7 @@ public class WindowTest  extends TestCase{
         };
         tr.start();
     }
-   public void testButton()//use SwingUtils.invokeAndWait
+   public void testButton()
    {
         final Runnable r=new Runnable(){
             public void run(){
