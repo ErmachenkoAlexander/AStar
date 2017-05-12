@@ -23,35 +23,7 @@ public class WindowTest  extends TestCase{
     protected void tearDown() throws Exception {
 
     }
-    public void testSpinners()
-    {
-        
-        final Runnable r=new Runnable(){
-            public void run(){
-        Window.spi1.setValue(1);
-        Window.spj1.setValue(3);
-        Window.spi2.setValue(9);
-        Window.spj2.setValue(0);
-       ArrayList<Integer> arr=new ArrayList<>();
-       arr=Window.getNumbers();
-       ArrayList<Integer> exp=new ArrayList<>();
-       exp.add(1);exp.add(3);exp.add(9);exp.add(0);
-       assertEquals(exp,arr);
-            }
-        };  
-        Thread tr=new Thread(){
-            public void run(){
-                try{
-                    SwingUtilities.invokeAndWait(r);
-                }
-                catch(Exception e)
-                {
-                    e.printStackTrace();
-                }
-            }
-        };
-        tr.start();
-    }
+    
    public void testButton()
    {
         final Runnable r=new Runnable(){
