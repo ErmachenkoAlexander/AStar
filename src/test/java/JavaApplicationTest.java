@@ -14,6 +14,7 @@ public class JavaApplicationTest extends TestCase {
     protected void tearDown() throws Exception {
 
     }
+    
    public void testAllJavaApp()
     {
         Window.createGUI();
@@ -70,7 +71,6 @@ public class JavaApplicationTest extends TestCase {
         int minLen = 60;
         assertEquals(len, minLen);
     }
-
     public void testPath4()//сложгый путь один проход
     {
        JavaApplication.prepare();

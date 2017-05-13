@@ -10,30 +10,36 @@ public class Window
     static public JSpinner spi1;
     static public JSpinner spj1;
     static public JSpinner spi2;
-    static public JSpinner spj2;
+    static public JSpinner spj2; 
+    static public JSpinner wallI;
+    static public JSpinner wallJ;
     static public JFrame frame;
     static public JLabel Path;
     static public JButton but;
-    static public void main(String[] arg)
-    {
-        
-    }
+    static public JButton addWall;
   static  public void createGUI()
     {
         frame = new JFrame(" frame");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          spi1 = new JSpinner();
          spj1 = new JSpinner();
+         wallI = new JSpinner();
+         wallJ = new JSpinner();
          spi2 = new JSpinner();
          spj2 = new JSpinner();
          Path=new JLabel("");
           but=new JButton("старт");
          but.addActionListener(new Listener());
+          addWall = new JButton("добавить");
+         addWall.addActionListener(new AddWallListener());
          frame.setLayout(new FlowLayout());
         frame.getContentPane().add(spi1);
         frame.getContentPane().add(spj1);
         frame.getContentPane().add(spi2);
         frame.getContentPane().add(spj2);
+        frame.getContentPane().add(wallI);
+        frame.getContentPane().add(wallJ);
+        frame.getContentPane().add(addWall);
         frame.getContentPane().add(but);
         frame.getContentPane().add(Path);
         frame.setPreferredSize(new Dimension(200, 100));

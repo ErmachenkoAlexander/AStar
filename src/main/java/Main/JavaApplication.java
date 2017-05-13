@@ -61,6 +61,7 @@ public class JavaApplication {
             }
         }
             if(ok) {
+                    
                 path = AStar();
                 if(win!=null)
                 Window.setRes(path);
@@ -99,6 +100,7 @@ public class JavaApplication {
                     next=next.getFather();
                     res.add(next);
                 }
+
                 return res;
             }
             for(int i=cur.getI()-1;i<cur.getI()+2;i++)
