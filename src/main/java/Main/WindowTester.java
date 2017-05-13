@@ -19,8 +19,13 @@ import Main.*;
 public class WindowTester implements Scenario {
     public int runIt(Object param) {
         try{
-    new ClassReference("Main.Window").startApplication();
+    new ClassReference("Main.JavaApplication").startApplication();
+    //Thread.sleep(3000);
     JButtonOperator firstButton = new JButtonOperator(Window.but);
+    Window.spi1.setValue(0);
+        Window.spj1.setValue(0);
+        Window.spi2.setValue(0);
+        Window.spj2.setValue(2);
     firstButton.push(); 
         }
         catch(Exception e)
