@@ -30,12 +30,16 @@ public class JavaApplication {
     static public Window win;
     static public ArrayList<Node> path;
     public static void main(String[] args) {
-        win=new Window();
-          win.createGUI();
+       win=new Window();
+          Window.createGUI();
+          prepare();
     }
     public static void prepare()
     {
          JavaApplication.Map=new Node[10][10];
+         for(int i=0;i<10;i++)
+                  for(int j=0;j<10;j++)
+                    Map[i][j]=new Node(i,j,maxInt,(byte)0);
         JavaApplication.Open=new ArrayList();
         JavaApplication.Close=new ArrayList();
     }
@@ -45,10 +49,10 @@ public class JavaApplication {
     {
         diag=14;
         dir=10;
-        setEnds(ends);
+        setEnds(Window.getNumbers());
         boolean ok=true;
         if(win!=null){
-        ArrayList<Integer> coord=new ArrayList<>(win.getNumbers());
+        ArrayList<Integer> coord=new ArrayList<>(Window.getNumbers());
        
         for(int i=0;i<4;i++)
             if(coord.get(i)>10||coord.get(i)<0) {
@@ -59,7 +63,7 @@ public class JavaApplication {
             if(ok) {
                 path = AStar();
                 if(win!=null)
-                win.setRes(path);
+                Window.setRes(path);
             }
     }
     static public void setEnds(ArrayList<Integer> coord)

@@ -8,9 +8,10 @@ import java.util.ArrayList;
  * Created by Валькирия on 30.11.2016.
  */
 public class Listener implements ActionListener {
+    @Override
     public void actionPerformed(ActionEvent e) {
-         JavaApplication.prepare();
         JavaApplication.setEnds(Window.getNumbers());
        JavaApplication.activate();
+       JavaApplication.prepare();
     }
 }

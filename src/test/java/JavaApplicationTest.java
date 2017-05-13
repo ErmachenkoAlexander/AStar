@@ -16,14 +16,10 @@ public class JavaApplicationTest extends TestCase {
     }
    public void testAllJavaApp()
     {
-        Window win=new Window();
-        win.createGUI();
-        win.spj2.setValue(2);
-        JavaApplication.win=win;
+        Window.createGUI();
         JavaApplication.prepare();
         ArrayList<Integer> ends=new ArrayList<>();
-        win.spj2.setValue(2);
-        JavaApplication.setEnds(win.getNumbers());
+        Window.spj2.setValue(2);
         for(int i=0;i<10;i++)
             for(int j=0;j<10;j++){
                 if(((i==0||i==1||i==2)&&j==1))
@@ -32,7 +28,7 @@ public class JavaApplicationTest extends TestCase {
                     Map[i][j]=new Node(i,j,maxInt,(byte)0);
             }
         JavaApplication.activate();
-       ArrayList<Node> path = JavaApplication.path;
+        ArrayList<Node> path=JavaApplication.path;
         int size = path.size();
         int len = 0;
         for (int i = 1; i < size; i++)
@@ -42,8 +38,8 @@ public class JavaApplicationTest extends TestCase {
                 len += JavaApplication.dir;
         int minLen = 58;
         assertEquals(len, minLen);
-        win.frame.setVisible(false);
-      
+        Window.frame.setVisible(false);
+        
     }
     public void testPath3()//без ограничений
     {
