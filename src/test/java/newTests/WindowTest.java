@@ -67,7 +67,7 @@ public class WindowTest extends TestCase{
         assertEquals(expPath, "Путь: i: 0 j: 0 i: 0 j: 1 ");  
    }
     
-    /* public void testDeleteWall()
+     public void testDeleteWall()
     {
         final Runnable r=new Runnable(){
             public void run(){
@@ -180,5 +180,5 @@ public class WindowTest extends TestCase{
         String expPath=Window.Path.getText();
         assertEquals(expPath, "Путь: i: 0 j: 0 i: 1 j: 1 ");  
    }
-    */
+    
 }
