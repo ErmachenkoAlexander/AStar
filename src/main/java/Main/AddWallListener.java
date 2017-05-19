@@ -18,7 +18,14 @@ public class AddWallListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         int i=((Number) Window.wallI.getValue()).intValue();
         int j=((Number) Window.wallJ.getValue()).intValue();
+        try
+        {
         JavaApplication.Map[i][j]=new Node(i,j,maxInt,(byte)1);
+        }
+        catch(Exception re)
+        {
+            
+        }
     }
 }
 

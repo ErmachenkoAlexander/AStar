@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Main;
+package newTests;
 
+import Main.Window;
 import javax.swing.JSpinner;
 import org.netbeans.jemmy.ClassReference;
 import org.netbeans.jemmy.Scenario;
@@ -15,7 +16,7 @@ import org.netbeans.jemmy.operators.JSpinnerOperator;
  *
  * @author Валькирия
  */
-public class Add2WallScenario implements Scenario {
+public class AddWallTester implements Scenario {
     public int runIt(Object param) {
         try{
     new ClassReference("Main.JavaApplication").startApplication();
@@ -30,9 +31,7 @@ public class Add2WallScenario implements Scenario {
         Window.spi2.setValue(0);
         Window.spj2.setValue(2);
     addWallButton.push();
-    I.setValue(1);
-    J.setValue(1);
-    addWallButton.push();
+    Thread.sleep(100);
     firstButton.push();
         }
         catch(Exception e)

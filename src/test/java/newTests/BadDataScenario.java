@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Main;
+package newTests;
 
+import Main.Window;
 import javax.swing.JSpinner;
 import org.netbeans.jemmy.ClassReference;
 import org.netbeans.jemmy.Scenario;
@@ -15,7 +16,7 @@ import org.netbeans.jemmy.operators.JSpinnerOperator;
  *
  * @author Валькирия
  */
-public class AddWallTester implements Scenario {
+public class BadDataScenario implements Scenario {
     public int runIt(Object param) {
         try{
     new ClassReference("Main.JavaApplication").startApplication();
@@ -23,8 +24,8 @@ public class AddWallTester implements Scenario {
     JButtonOperator firstButton = new JButtonOperator(Window.but);
     JSpinnerOperator I = new JSpinnerOperator(Window.wallI);
     JSpinnerOperator J = new JSpinnerOperator(Window.wallJ);
-    I.setValue(0);
-    J.setValue(1);
+    I.setValue(13);
+    J.setValue(-8);
     Window.spi1.setValue(0);
         Window.spj1.setValue(0);
         Window.spi2.setValue(0);

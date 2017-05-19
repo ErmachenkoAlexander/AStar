@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Main;
+package newTests;
 
+import Main.Window;
 import javax.swing.JSpinner;
 import org.netbeans.jemmy.ClassReference;
 import org.netbeans.jemmy.Scenario;
